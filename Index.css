@@ -1,0 +1,358 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+.ZenDotsRegular{
+    font-family: "Zen Dots", sans-serif;
+    font-weight: bolder;
+}
+
+
+:root{
+    --Body_Background-color: rgb(1, 53, 1);
+    --TopLeft_Button_bg-color: rgb(177, 2, 2);
+    --TopRight_Button_bg-color: rgb(0, 0, 128);
+    --BottomLeft_Button_bg-color: rgb(0, 128, 0);
+    --BottomRight_Button_bg-color: rgb(179, 117, 2);
+    --GameBoard_Logo_OnOffButton_bg-color: grey;
+    --GameBoard_Logo_Button_bg-color: rgb(71, 69, 69);
+}
+
+html{ /*Is this necessary?*/
+    min-width: 400px;
+    min-height: 400px;
+
+}
+
+body{ /*Are the min-width and height necessary?*/
+    background-color: var(--Body_Background-color);
+    min-width: 400px;
+    min-height: 400px;
+}
+
+
+.Container{
+    display: flex;
+    justify-content: center;
+
+
+}
+
+
+
+.GameBoard_Container{
+    border: solid black 2px;
+    
+    height: 400px;
+    width: 400px;
+
+    border-radius: 100%;
+
+
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 10px 0px;
+
+}
+
+
+
+
+
+
+/*_________________________________________________________________*/
+
+.GameBoard_Button{
+    height: 200px;
+    width: 200px;
+}
+
+.GameBoard_Button:hover{
+    cursor: pointer;
+    filter: brightness(70%);
+}
+
+
+
+.TopLeft_Button{
+    border-top-left-radius: 100%;
+
+    background-color: var(--TopLeft_Button_bg-color);
+}
+
+
+.TopRight_Button{
+    border-top-right-radius: 100%;
+
+    background-color: var(--TopRight_Button_bg-color);
+}
+
+
+.BottomLeft_Button{
+    border-bottom-left-radius: 100%;
+
+
+    background-color: var(--BottomLeft_Button_bg-color);
+}
+
+
+
+.BottomRight_Button{
+    border-bottom-right-radius: 100%;
+
+
+    background-color: var(--BottomRight_Button_bg-color);
+}
+
+/*______________________________________________________________________________________*/
+
+
+
+
+
+
+
+/*_______________________________________________________________________________________*/
+
+.GameBoard_Logo{ 
+
+    height: 200px;
+    width: 200px;
+
+    background-color: purple;
+
+    border-radius: 100%;
+
+    z-index: 999;
+
+    
+    position: absolute;
+    top: 115;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+
+}
+
+table, td{ 
+    display: flex;
+    justify-content: center; 
+}
+
+
+
+#GameBoard_Logo_Bottom{
+    display: flex;
+    justify-content: space-around;
+
+    font-size: 16px;
+}
+
+
+
+.GameBoard_Logo_Button{
+    height: 25px;
+    width: 25px;
+
+    border-radius: 100%;
+    background-color: var(--GameBoard_Logo_Button_bg-color);
+
+    cursor: pointer;
+}
+
+.OnOffButton{
+    background-color: var(--GameBoard_Logo_OnOffButton_bg-color);
+}
+
+.StartButton{
+    background-color: var(--GameBoard_Logo_Button_bg-color);
+    margin: 0px 10px 0px 0px;
+}
+
+.RestartButton{
+    background-color: var(--GameBoard_Logo_Button_bg-color);
+}
+
+/*__________________________________________________________________________________________________________________*/
+
+
+.Counter_Container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    background-color: darkslategrey;
+    padding: 20px 30px 20px 10px;
+    margin: 0px 0px 10px 0px; 
+    border-radius: 5%;
+}
+
+.RoundDisplayer{
+    color: black;
+}
+
+
+/*_____________________________________________________________________*/
+
+.UI_Buttons_Container{  
+    position: absolute;
+    top: 100;
+    left: 920;
+
+    display: flex; 
+    flex-direction: column;
+    align-items: center;  
+}
+
+.NextOrRestart_Container{    
+    border-radius: 5%;
+
+    margin: 5px 0px 0px 0px;
+
+
+}
+
+
+.NextOrRestart_Button{
+    background-color: darkslategrey;
+    padding: 20px 30px 20px 10px;
+    cursor: pointer;
+
+
+    display: none; 
+
+}
+
+
+/*______________________________________________________________*/
+
+
+
+@media (max-width: 390px) and (max-height: 844px) /*Iphone 12*/
+{
+    body{
+        background-color: orange;
+    }
+}
+
+
+
+@media (max-width: 1190px)
+{
+    .container{
+        border: none;
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .Counter_Container{
+        position: relative;
+        left: 0;
+        top: 0;
+
+        margin: 0px 15px 0px 0px;
+    }
+
+    .UI_Buttons_Container{
+        position: relative;
+        top: 0;
+        left: 0;
+
+        flex-direction: row;
+    } 
+}
+
+
+@media (max-width: 558px)
+{
+    .Counter_Container{
+        font-size: 12px;
+    }
+
+    .NextOrRestart_Button{
+        font-size: 12px;
+    }
+}
+
+
+
+@media (max-width: 440px)
+{
+    .GameBoard_Container{
+        border: solid black 2px;
+        height: 350px;
+        width: 350px;
+    }
+
+
+    .GameBoard_Button{
+        height: 175px;
+        width: 175px;
+    }
+
+    .GameBoard_Logo{
+        height: 200px; 
+        width: 200px;
+        top: 90;
+    
+    }
+
+    #GameBoard_Logo_Top{
+        font-size: 16px;
+        
+    }
+
+
+    .UI_Buttons_Container{
+        flex-direction: column;
+    } 
+
+    .Counter_Container{
+        margin: 0px 0px 5px 0px; 
+    }
+
+    .NextOrRestart_Container{
+        margin: 5px 0px 0px 0px;
+    }
+
+    
+}
+
+
+@media (max-width: 390px)
+{
+    .GameBoard_Container{
+        height: 300px;
+        width: 300px;
+    }
+
+    .GameBoard_Button{
+        height: 150px;
+        width: 150px;
+    }
+
+    .GameBoard_Logo{
+        height: 150px;
+        width: 150px;
+    }
+
+    #GameBoard_Logo_Top{
+        font-size: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
