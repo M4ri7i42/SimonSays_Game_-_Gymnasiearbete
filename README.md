@@ -36,7 +36,6 @@ Course: Gymnasiearbete
 
 ## How the game looks: 
 <img width="629" height="306" alt="Trackers_Together" src="https://github.com/user-attachments/assets/7f39c305-2aee-44f8-af65-c47ae72129bc" />
-<img width="629" height="306" alt="Trackers_Together" src="https://github.com/user-attachments/assets/7f39c305-2aee-44f8-af65-c47ae72129bc" />
 
 
 
